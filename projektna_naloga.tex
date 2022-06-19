@@ -24,21 +24,14 @@
     \item Na vzorcu $200$ družin smo ocenili delež družin v populaciji, pri
         katerih vodja gospodinjstva nima srednješolske izobrazbe. Cenilka za to
         je bilo enostavno povprečje.
-    \item Standardno napako ocenimo z nepristransko cenilko $\hat{SE}_+^2$
-%    \item Ker je cenilka za delež iz a) dela naloge nepristranska, je srednja
-%        kvadratična napaka enaka kar varianci cenilke $\hat{d}$.
-%        Izračunamo torej
-%        \[
-%            \mse(\hat{d}) = \var(\hat{d}) = \frac{\sigma^2}{n} \left( \frac{N - n}{N - 1} \right)
-%        \]
-%        Varianca $\sigma$ je enaka $p (1 - p)$, ker je $d$ indikator dogodka. To
-%        vstavimo v enačbo in dobimo oceno za $SE$
-%        \[
-%            \se(\hat{d}) = \sqrt{\var(\hat{d})} = \sqrt{\frac{\hat{p} (1 -
-%            \hat{p})}{n} \frac{N - n}{N - 1}}.
-%        \]
-%
-    \item Pravi delež ljudi, ki nimajo srednješolske izobrazbe je enak $
+    \item Standardno napako ocenimo z nepristransko cenilko $\widehat{\se}_+^2$.
+        Tako dobimo
+        \[
+            \widehat{\se}_+^2 = \frac{N - n}{N n (n - 1)} \sum_{i=1}^{n} (x_i -
+            \bar{x})^2
+        \]
+
+    \item Pravi delež ljudi, ki nimajo srednješolske izobrazbe je enak
 \end{enumerate}
 
 \section{Druga naloga}
