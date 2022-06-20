@@ -1,6 +1,10 @@
 import pandas as pd
 import math
 import matplotlib.pyplot as plt
+from random import seed, randint
+
+# Definirajmo seme, da bo program vedno vračal isti izhod.
+seed(19748)
 
 # Preberemo podatke in jih shranimo v X
 X = pd.read_csv("Kibergrad.csv")
@@ -13,12 +17,13 @@ X['brez_ss'] = X['IZOBRAZBA'].apply(lambda x: 1 if x < 39 else 0)
 
 N = len(X)  # Velikost populacije
 n = 200  # Velikost vzorca
-sample = X.sample(n)  # Vzamemo vzorec velikosti n
+sample = X.sample(n, random_state=randint(0,
+                                          100))  # Vzamemo vzorec velikosti n
 
 # a)
 # Izbrana cenilka za delež je delež na vzorcu
 mi = sample['brez_ss'].mean()
-print(f"Ocena za delež je {mi:0.3f}.")
+print(f"a) Ocena za delež je {mi:0.3f}.")
 
 # b)
 # Standardna napaka cenilke iz naloge a)
@@ -27,23 +32,23 @@ SE = math.sqrt((N - n) * mi * (1 - mi) / ((n - 1) * N))
 
 # https://stackoverflow.com/questions/53519823/confidence-interval-in-python-dataframe
 CI = (mi - 1.96 * SE, mi + 1.96 * SE)
-print(f"Interval zaupanja je {CI}.")
+print(
+    f"b) Ocena za standardno napako je {SE:0.5f},\ninterval zaupanja pa je ({CI[0]:0.5f}, {CI[1]:0.5f})."
+)
 
 # c)
-# pop_mi = X['brez_ss'].mean()
-# pop_sigma = X['brez_ss'].std(ddof=0)
-# pop_SE = ((N - n) / (N - 1) * (pop_sigma**2) / n)**(1 / 2)
-# pop_ci = (pop_mi - 1.96 * pop_sigma / math.sqrt(N),
-#           pop_mi + 1.96 * pop_sigma / math.sqrt(N))
-# print(pop_ci)
-
 pop_mi = X['brez_ss'].mean()
-pop_SE = X['brez_ss'].sem()
+pop_SE = math.sqrt(X['brez_ss'].var() / n)
 
 if CI[0] < pop_mi < CI[1]:
-    print(f"Da, interval zaupanja pokrije populacijski delež: {pop_mi}")
+    print(
+        f"c) Da, interval zaupanja pokrije populacijski delež: {pop_mi:0.5f}")
 else:
-    print(f"Ne, interval zaupanja ne pokrije populacijskega deleža: {pop_mi}")
+    print(
+        f"c) Ne, interval zaupanja ne pokrije populacijskega deleža {pop_mi:0.5f}"
+    )
+
+print(f"Prava standardna napaka je enaka {pop_SE:0.5f}.")
 
 # d)
 tests = 99
@@ -57,7 +62,10 @@ if CI[0] < pop_mi < CI[1]:
     count += 1
 
 for i in range(tests):
-    sample = X.sample(n)
+    # Argument random_state je drugačen za vsak vzorec, ampak vzorci so pa pri
+    # vsakem poganjanju programa enaki
+    sample = X.sample(n, random_state=randint(0, 100))
+
     mi = sample['brez_ss'].mean()
     SE = math.sqrt((N - n) * mi * (1 - mi) / ((n - 1) * N))
     CI = (mi - 1.96 * SE, mi + 1.96 * SE)
@@ -68,21 +76,24 @@ for i in range(tests):
         count += 1
 
 print(
-    f"Pri n={n} {100*count/(tests+1)}% intervalov zaupanja pokrije populacijski delež."
+    f"d) Pri n={n} {100*count/(tests+1)}% intervalov zaupanja pokrije populacijski delež."
 )
 # print(samples)
 
 for i, low, high, _, _ in samples.to_records():
     plt.plot((low, high), (i, i), color='blue')
-plt.plot((pop_mi, pop_mi), (0, tests), color='red')
+plt.plot((pop_mi, pop_mi), (0, tests + 1), color='red')
 plt.savefig("1d.png")
 
 plt.clf()
 
 # e)
 # Standardni odklon vzorčnih deležev za 100 prej dobljenih vzorcev
-# std_mi_samples = samples['mi'].std(ddof=0)
-# print(pop_SE)
+std_mi_samples = samples['mi'].std(ddof=0)
+pop_mi = X['brez_ss'].mean()
+SE = math.sqrt((N - n) * pop_mi * (1 - pop_mi) / ((n - 1) * N))
+print(f"e) Standardni odklon vzorčnih deležev za n={n} je {std_mi_samples:0.5f},\
+\nprava standardna napaka za vzorec velikosti {n} pa {SE:0.5f}")
 
 # f)
 n = 800
@@ -90,8 +101,11 @@ tests = 100
 count = 0
 samples = pd.DataFrame(columns=['low', 'high', 'mi', 'SE'])
 
-for _ in range(tests):
-    sample = X.sample(n)
+for i in range(tests):
+    # Argument random_state je drugačen za vsak vzorec, ampak vzorci so pa pri
+    # vsakem poganjanju programa enaki
+    sample = X.sample(n, random_state=randint(0, 100))
+
     mi = sample['brez_ss'].mean()
     SE = math.sqrt((N - n) * mi * (1 - mi) / (N * (n - 1)))
     CI = (mi - 1.96 * SE, mi + 1.96 * SE)
@@ -111,8 +125,14 @@ plt.savefig("1f.png")
 plt.clf()
 
 print(
-    f"Pri n={n} {100*count/tests}% intervalov zaupanja pokrije populacijski delež."
+    f"f) Pri n={n} {100*count/tests}% intervalov zaupanja pokrije populacijski delež."
 )
+
+std_mi_samples = samples['mi'].std(ddof=0)
+pop_mi = X['brez_ss'].mean()
+SE = math.sqrt((N - n) * pop_mi * (1 - pop_mi) / ((n - 1) * N))
+print(f"Standardni odklon vzorčnih deležev za n={n} je {std_mi_samples:0.5f},\
+\nprava standardna napaka za vzorec velikosti {n} pa {SE:0.5f}")
 
 # pop_SE = ((N - n) / (N - 1) * (pop_sigma**2) / n)**(1 / 2)
 # STD_mi_samples2 = samples['mi'].std(ddof=0)
