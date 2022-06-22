@@ -1,13 +1,6 @@
 # Fdb version 3
-["bibtex projektna_naloga"] 1655756507 "projektna_naloga.aux" "projektna_naloga.bbl" "projektna_naloga" 1655756507
-  "/usr/share/texmf-dist/bibtex/bst/base/siam.bst" 1650183167 19403 812681d329611d2a1625ad7ae5186edc ""
-  "projektna_naloga.aux" 1655756505 1153 4240a6c887663e83e589c105c1f78790 "pdflatex"
-  "viri.bib" 0 -1 0 ""
-  (generated)
-  "projektna_naloga.bbl"
-  "projektna_naloga.blg"
-["pdflatex"] 1655756504 "/home/david/fmf/stat/projektna_naloga/projektna_naloga.tex" "projektna_naloga.pdf" "projektna_naloga" 1655756507
-  "/home/david/fmf/stat/projektna_naloga/projektna_naloga.tex" 1655756507 4860 6da57cc3d352ea70626809688647b9de ""
+["pdflatex"] 1655855998 "/home/david/fmf/stat/projektna_naloga/projektna_naloga.tex" "projektna_naloga.pdf" "projektna_naloga" 1655855998
+  "/home/david/fmf/stat/projektna_naloga/projektna_naloga.tex" 1655855998 9491 2f247e6c8dafdda7e5c68fa3440c3d82 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -46,9 +39,11 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1650183167 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1650183167 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1650183167 32362 179c33bbf43f19adbb3825bb4e36e57a ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1650183167 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1650183167 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb" 1650183167 33993 9b89b85fd2d9df0482bd47194d1d3bf3 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1650183167 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1650183167 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1650183167 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1650183167 31099 c85edf1dd5b9e826d67c9c7293b6786c ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1650183167 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -83,10 +78,11 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1654985930 2927659 d852f91f24d4ab2c53009521003f8f96 ""
   "1d.png" 1655755948 11402 a4a5984e3069d36a924afdac4aa62881 ""
   "1f.png" 1655755949 11879 274f15b59898f0516f3d0d26d4c6e17b ""
-  "2.png" 1655746417 51848 48b4de89ddc702f2adf4bc16ce01aae7 ""
-  "projektna_naloga.aux" 1655756505 1153 4240a6c887663e83e589c105c1f78790 "pdflatex"
-  "projektna_naloga.bbl" 0 -1 0 "bibtex projektna_naloga"
-  "projektna_naloga.tex" 1655756507 4860 6da57cc3d352ea70626809688647b9de ""
+  "2.png" 1655842302 51848 48b4de89ddc702f2adf4bc16ce01aae7 ""
+  "3a.png" 1655855614 58444 36987072c0ea30419b0a639de2611208 ""
+  "3b.png" 1655855614 57953 1810dddf08b215ab84b3ab6a840cceaa ""
+  "projektna_naloga.aux" 1655855985 2060 324a7917f3c817bd596b26580454439e "pdflatex"
+  "projektna_naloga.tex" 1655855998 9491 2f247e6c8dafdda7e5c68fa3440c3d82 ""
   (generated)
   "projektna_naloga.aux"
   "projektna_naloga.log"

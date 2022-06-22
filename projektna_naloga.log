@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.6.12)  20 JUN 2022 22:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.6.12)  22 JUN 2022 01:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -279,27 +279,73 @@ Package pdftex.def Info: 1f.png  used on input line 99.
 <2.png, id=27, 722.7pt x 361.35pt>
 File: 2.png Graphic file (type png)
 <use 2.png>
-Package pdftex.def Info: 2.png  used on input line 112.
-(pdftex.def)             Requested size: 361.3491pt x 180.67456pt.
+Package pdftex.def Info: 2.png  used on input line 114.
+(pdftex.def)             Requested size: 325.21199pt x 162.60599pt.
+ [3 <./1f.png> <./2.png>]
+Overfull \hbox (4.15671pt too wide) in paragraph at lines 176--181
+\OT1/cmr/m/n/10 ver-jetja enaka vek-torju $[] = [][] \OML/cmm/m/it/10 X[]Y$\OT1
+/cmr/m/n/10 , kar je natanko re^^Tsitev predolo^^Tcenega
+ []
 
-Overfull \hbox (16.3491pt too wide) in paragraph at lines 112--113
+
+! LaTeX Error: Illegal character in array arg.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.186         &
+                0.001\\ 0.091\\ -10.39\\
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Illegal character in array arg.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.190         &
+                0.005\\ -11.504\\ -9.801\\ -5.486\\ -0.949\\ 3.617\\ 7.28\\ ...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[4]
+<3a.png, id=38, 578.16pt x 216.81pt>
+File: 3a.png Graphic file (type png)
+<use 3a.png>
+Package pdftex.def Info: 3a.png  used on input line 204.
+(pdftex.def)             Requested size: 346.89867pt x 130.08699pt.
+
+Overfull \hbox (1.89867pt too wide) in paragraph at lines 204--206
  [][] 
  []
 
-No file projektna_naloga.bbl.
-[3 <./1f.png> <./2.png>] (./projektna_naloga.aux)
+<3b.png, id=39, 578.16pt x 216.81pt>
+File: 3b.png Graphic file (type png)
+<use 3b.png>
+Package pdftex.def Info: 3b.png  used on input line 212.
+(pdftex.def)             Requested size: 346.89867pt x 130.08699pt.
+
+Overfull \hbox (1.89867pt too wide) in paragraph at lines 212--214
+ [][] 
+ []
+
+[5 <./3a.png>] [6 <./3b.png>] (./projektna_naloga.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4496 strings out of 478238
- 72723 string characters out of 5850456
- 360627 words of memory out of 5000000
- 22701 multiletter control sequences out of 15000+600000
+ 4510 strings out of 478238
+ 72842 string characters out of 5850456
+ 380627 words of memory out of 5000000
+ 22714 multiletter control sequences out of 15000+600000
  479182 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,8n,63p,313b,519s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,9n,63p,618b,519s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public
@@ -308,14 +354,16 @@ mmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
 /share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
-sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf
--dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmtt10.pfb>
-Output written on projektna_naloga.pdf (3 pages, 215987 bytes).
+/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></u
+sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.p
+fb>
+Output written on projektna_naloga.pdf (6 pages, 350237 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 114 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -34,8 +34,8 @@ gospodinjstva nima srednješolske izobrazbe}. Delež gospodinjstev, v katerih
 vodja nima srednješolske izobrazbe je v tem primeru povprečje spremenljivke $Y$
 na populaciji.
 
-Pomagal sem si s programom \textbf{naloga1.py}. Če ga poženemo, vrne spodnji
-izhod.
+Pomagal sem si s programom \textbf{naloga1.py}, ki vrne spodnji izhod, ko ga
+poženemo.
 \begin{verbatim}
 a) Ocena za delež je 0.200.
 b) Ocena za standardno napako je 0.02829,
@@ -105,17 +105,121 @@ prava standardna napaka za vzorec velikosti 800 pa 0.01431
 
 \section{Druga naloga}
 
-Opazujemo normalnost 
+Pri drugi nalogi smo opazovali normalnost empirične porazdelitve. V obdobju $24$
+dni so vsak dan analizirali pet odlitkov. Te odlitke sem združil v 
+seznam dolžine $120$, ki vsebuje vrednosti vseh odvzetih odlitkov.
+
 \begin{figure}[H]
-    \caption{}
     \centering
-    \includegraphics[scale=0.5]{2.png}
+    \includegraphics[scale=0.45]{2.png}
+    \caption{Na levi strani je histogram, kjer so prikazani vsi odlitki, hkrati
+    je pa dorisana krivulja normalne porazdelitve, ki to empirično porazdelitev
+    najbolje aproksimira. Na sredini je viseči histogram, ki za vsak razred
+    podatkov nariše razliko med pričakovanim deležem podatkov in empiričnem
+    deležem podatkov v tem razredu. Na desni pa je primerjalni kvantilni (Q-Q)
+    diagram, ki primerja normalno in empirično porazdelitev.}
+    \label{slika 2}
 \end{figure}
+
+Podatke smo združili v razrede po modificiranem Freedman-Diaconisovem pravilu.
+Najprej smo izračunali interkvartilni razmik po enačbi
+\begin{equation*}
+    IQR = x_\frac{3}{4} - x_\frac{1}{4},
+\end{equation*}
+kjer sta $x_\frac{3}{4}$ tretji kvartil in $x_\frac{1}{4}$ prvi kvartil. Nato
+smo z uporabo interkvartilnega razmika izračunali še širino intervalov $d$ po
+formuli
+\begin{equation*}
+    d = \frac{2{,}6\ IQR}{\sqrt[3]{n}}.
+\end{equation*}
+V našem primeru po tej metodi širina intervalov znaša $0{,}09488$.
 
 \section{Tretja naloga}
 
-\nocite{*}
-\bibliographystyle{siam}
-\bibliography{viri}{}
+Pri tretji nalogi obravnavamo mesečne temperature v Ljubljani v letih od 1986 do
+2020. Najprej sem podatke združil v seznam dolžine $420$.
+
+Obravnaval bom model A, ki je linearen trend s sinusnim nihanjem s periodo eno
+leto, in model B, ki je linearen trend s spreminjanjem temperature vsak mesec
+posebej. Model A lahko opišemo s konfiguracijsko matriko
+\[
+    X_A =
+    \left[ {\begin{array}{cccc}
+        1 & 0 & 0 & 1\\
+        1 & 1 & \sin(\frac{\pi}{6}) & \cos(\frac{\pi}{6})\\
+        1 & 2 & \sin(\frac{2 \pi}{6}) & \cos(\frac{2 \pi}{6})\\
+        1 & 3 & \sin(\frac{3 \pi}{6}) & \cos(\frac{3 \pi}{6})\\
+        \vdots & \vdots & \vdots & \vdots\\
+        1 & 418 & \sin(\frac{418 \pi}{6}) & \cos(\frac{418 \pi}{6})\\
+        1 & 419 & \sin(\frac{419 \pi}{6}) & \cos(\frac{419 \pi}{6})\\
+    \end{array} } \right],
+\]
+model B pa z matriko
+\[
+    X_B =
+    \left[ {\begin{array}{ccccccccccccc}
+        0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+        1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+        2 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+        3 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+        4 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+        5 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+        6 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+        \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots &
+        \vdots & \vdots & \vdots & \vdots & \vdots\\
+        417 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0\\
+        418 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0\\
+        419 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+    \end{array} } \right].
+\]
+
+Na predavanjih smo pokazali, da je ocena za vektor $\beta$ po metodi največjega
+verjetja enaka vektorju $\hat{\beta} = \left( X^\mathrm{T} X\right)^{-1}
+X^\mathrm{T} Y$, kar je natanko rešitev predoločenega sistema $X \beta = Y$ po
+metodi najmanjših kvadratov (s predpostavko, da je $X$ polnega ranga). Tu je $Y$
+vektor opažanj.
+
+Označimo z $\beta_A$ in $\beta_B$ oceni parametrov modelov A in B.
+S programom \textbf{naloga3.py} izračunamo
+\begin{equation*}
+    \hat{\beta_A} = \left[ \begin{array}[c]
+        & 0.001\\ 0.091\\ -10.39\\
+    \end{array} \right]
+    \quad \text{in} \quad
+    \hat{\beta_B} = \left[ \begin{array}
+        & 0.005\\ -11.504\\ -9.801\\ -5.486\\ -0.949\\ 3.617\\ 7.28\\ 9.292\\ 8.733\\
+        3.704\\ -1.033\\ -6.301\\ -11.095\\
+    \end{array} \right].
+\end{equation*}
+Rezultati se zdijo smiselni, saj bo nihanje skozi leto res izgledalo podobno
+grafu nasprotne vrednosti kosinusa. Podobno iz $\hat{\beta_B}$ razberemo, da so
+pozimi temperature nižje od povprečja, poleti pa višje. Prvi komponenti vektorjev
+$\hat{\beta_A}$ in $\hat{\beta_B}$ predstavljata linearen trend, ki je pri obeh
+modelih pozitiven, torej so se temperature v opazovanem času v povprečju
+dvignile.
+
+
+\begin{figure}[H]
+    \centering{}
+    \includegraphics[scale=0.6]{3a.png}
+    \caption{Na grafikonu sta narisani dve krivulji. Oranžna označuje empirične
+    podatke, modra pa oceno znotraj modela A.}
+    \label{slika 3a}
+\end{figure}
+
+\begin{figure}[H]
+    \centering{}
+    \includegraphics[scale=0.6]{3b.png}
+    \caption{Na grafikonu sta narisani dve krivulji. Oranžna označuje empirične
+    podatke, modra pa oceno znotraj modela B.}
+    \label{slika 3b}
+\end{figure}
+
+Pri drugem delu naloge smo izračunali Akaikejevo informacijo 
+
+
+% \nocite{*}
+% \bibliographystyle{siam}
+% \bibliography{viri}{}
 
 \end{document}
