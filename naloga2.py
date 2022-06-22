@@ -31,7 +31,7 @@ IQR = q3 - q1
 width = 2.6 * IQR / (n**(1 / 3))
 
 print(f"Širina intervalov izračunana po modificiranem \
-Freedman-Diaconisovem pravilu je enaka {width:0.5f}.")
+\nFreedman-Diaconisovem pravilu je enaka {width:0.5f}.")
 
 # Define bins
 bins = int(math.ceil((Y['value'].max() - Y['value'].min()) / width))
@@ -64,7 +64,9 @@ freq['obs_count'] = 24 * 5 * freq / freq.sum()
 freq['exp_count'] = 24 * 5 * aux(freq.index, mi, sigma)
 freq['diffs'] = freq['obs_count'] - freq['exp_count']
 
-freq['diffs'].plot.bar(ax=plots[1])
+freq['diffs'].plot.bar(ylabel="Razlika med pričakovano in dejansko frekvenco",
+                       xlabel="Razredi",
+                       ax=plots[1])
 
 # c)
 sm.qqplot(Y['value'],

@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1655855998 "/home/david/fmf/stat/projektna_naloga/projektna_naloga.tex" "projektna_naloga.pdf" "projektna_naloga" 1655855998
-  "/home/david/fmf/stat/projektna_naloga/projektna_naloga.tex" 1655855998 9491 2f247e6c8dafdda7e5c68fa3440c3d82 ""
+["pdflatex"] 1655858137 "/home/david/fmf/stat/projektna_naloga/projektna_naloga.tex" "projektna_naloga.pdf" "projektna_naloga" 1655858137
+  "/home/david/fmf/stat/projektna_naloga/projektna_naloga.tex" 1655858135 10491 60e1ded269d06a957073215cf763de04 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -78,11 +78,11 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1654985930 2927659 d852f91f24d4ab2c53009521003f8f96 ""
   "1d.png" 1655755948 11402 a4a5984e3069d36a924afdac4aa62881 ""
   "1f.png" 1655755949 11879 274f15b59898f0516f3d0d26d4c6e17b ""
-  "2.png" 1655842302 51848 48b4de89ddc702f2adf4bc16ce01aae7 ""
-  "3a.png" 1655855614 58444 36987072c0ea30419b0a639de2611208 ""
-  "3b.png" 1655855614 57953 1810dddf08b215ab84b3ab6a840cceaa ""
-  "projektna_naloga.aux" 1655855985 2060 324a7917f3c817bd596b26580454439e "pdflatex"
-  "projektna_naloga.tex" 1655855998 9491 2f247e6c8dafdda7e5c68fa3440c3d82 ""
+  "2.png" 1655857076 59007 7d545ae08eb129764bb1cf2825a918b3 ""
+  "3a.png" 1655856544 58444 36987072c0ea30419b0a639de2611208 ""
+  "3b.png" 1655856544 57953 1810dddf08b215ab84b3ab6a840cceaa ""
+  "projektna_naloga.aux" 1655858136 1975 a586f83820d99e1cb77cc81aa312e354 "pdflatex"
+  "projektna_naloga.tex" 1655858135 10491 60e1ded269d06a957073215cf763de04 ""
   (generated)
   "projektna_naloga.aux"
   "projektna_naloga.log"

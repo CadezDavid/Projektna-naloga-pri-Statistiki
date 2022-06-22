@@ -42,7 +42,7 @@ plt.clf()
 RSS_A = np.linalg.norm(Y - np.dot(X_A, beta_A))
 
 AIC_A = 2 * 4 + n * np.log(RSS_A)
-print(f"Akaikejeva informacija za model A: {AIC_A}")
+print(f"Akaikejeva informacija za model A: {AIC_A:0.5f}")
 
 X_B = np.arange(n).reshape([n, 1])
 for i in range(12):
@@ -73,4 +73,4 @@ plt.clf()
 RSS_B = np.linalg.norm(Y - np.dot(X_B, beta_B))
 
 AIC_B = 2 * (1 + 12) + n * np.log(RSS_B)
-print(f"Akaikejeva informacija za model B: {AIC_B}")
+print(f"Akaikejeva informacija za model B: {AIC_B:0.5f}")
